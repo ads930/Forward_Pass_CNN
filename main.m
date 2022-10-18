@@ -10,7 +10,7 @@ t = cputime();
 Con_Mat = zeros(10, 10); %confusion matrix
 images = size(imageset, 4); %number of images in dataset
 num_correct = 0;
-for idx = 1:images/100 %iterate through number of images in dataset
+for idx = 1:images %iterate through number of images in dataset
       %imagesc(imageset(:,:,:,idx)); truesize(gcf,[64 64]);
     in = imageset(:,:,:,idx); %access image at index, idx
     [p, i] = classify(double(in), filterbanks, biasvectors);
